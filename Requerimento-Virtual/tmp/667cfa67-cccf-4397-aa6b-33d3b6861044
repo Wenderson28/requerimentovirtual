@@ -1,0 +1,306 @@
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.id"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.timeStamp"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nome"
+
+Kaue Reboucas de Araujo
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.matricula"
+
+202020
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.curso"
+
+Biologia
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.motivo"
+
+Outros
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.outro"
+
+asdasdasdsaa
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.data"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeTipo"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeDisc"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeProf"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.data2"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeTipo2"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeDisc2"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeProf2"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="foto"; filename=""
+Content-Type: application/octet-stream
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.textarea"
+
+sdasdsad
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.motivo2"
+
+Justificativa de Faltas
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.outro2"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.data3"
+
+2021-12-16
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeTipo3"
+
+dasd
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeDisc3"
+
+asdasd
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeProf3"
+
+asdasd
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.data4"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeTipo4"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeDisc4"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.nomeProf4"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="foto2"; filename="nn lembro.txt"
+Content-Type: text/plain
+
+#{extends 'main3.html' /} #{set title:'Pagina Inicial'/}
+<style>
+
+h1 {
+	text-aligner: center;
+}
+
+#req01 {
+	text-align: center;
+	margin-top: 40px;
+}
+
+form {
+	display: flex;
+}
+
+#req02 {
+	text-align: center;
+	margin-top: 40px;
+}
+
+.msgConc{
+	font-size: 15px;
+	text-align: center;
+	background-color: #3DE6AF;
+	color: blue;
+	margin: 10px;
+}	
+table {
+	margin-top: 40px;
+} 
+td {
+	overflow: hidden;
+	max-width: 300px;
+	word-wrap: break-word;
+}
+
+hr {
+	margin: 5px;
+}
+
+#form10 {
+	margin-top: 40px;
+}
+
+table {
+	margin-top: 40px;
+} 
+
+#form23 {
+	margin-top: 40px;
+}
+
+</style>
+<body>
+		<div id="top"></div>
+		<h3>Requerimentos para Processo</h3>
+		#{if flash.success}
+			<div class='msgConc'>${flash.success}</div>
+		#{/if}
+		<div id="form23">
+			<form class="form-inline my-2 my-lg-0" action="@{Professores.listarEnc}">
+	      <input name="busca" class="form-control mr-sm-2" type="search" placeholder="Digite o matricula do aluno..." aria-label="Pesquisar">
+	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span class="iconify" data-icon="cil:magnifying-glass"></span></button>
+	    </form>
+		</div>
+	 <table class="table table-striped">
+			<thead>
+	
+				<tr>
+					<th scope="col">N&#186;</th>
+					<th scope="col">DATA</th>
+					<th scope="col">NOME/MATR&Iacute;CULA</th>	
+					<th scope="col">CURSO</th>				
+					<th scope="col">MOTIVO(S)</th>			
+					<th scope="col">DESCRI&Ccedil;&Atilde;O</th>					
+					<th scope="col">DOCUMENTO</th>			
+					<th scope="col">SITUA&Ccedil;&Atilde;O</th>
+					<th scope="col">SALVAR</th>
+				</tr>
+			</thead>
+			<tbody>
+			#{list items:requerimentos, as: 'requerimento'}
+				#{if requerimento.matriculaProf == session.get("matriculaUsuario") && requerimento.sit == null}
+						<tr>
+							<td scope="row">${requerimento.id}&#186;</td>
+							<td scope="row">${requerimento.timeStamp}</td>
+							<td scope="row">${requerimento.nome} / ${requerimento.matricula}</td>
+							<td scope="row">${requerimento.curso}</td>
+							<td scope="row">${requerimento.motivo} #{if requerimento?.outro} - ${requerimento.outro} #{/if}
+							#{if requerimento?.motivo2}
+							<br>
+							<hr>
+							${requerimento.motivo2} (2) 
+								#{if requerimento?.outro2}
+								 - ${requerimento.outro2} 
+								#{/if}					
+							#{/if}
+							
+							
+								
+							 </td>
+							
+							<td scope="row">#{if requerimento?.data}<b>Data:</b> ${requerimento.data} #{/if}
+							#{if requerimento?.data2} - ${requerimento.data2} #{/if}
+							
+							#{if requerimento?.nomeTipo} <b>Tipo:</b> ${requerimento.nomeTipo} #{/if}
+							#{if requerimento?.nomeTipo2} - ${requerimento.nomeTipo2} #{/if}
+							
+							#{if requerimento?.nomeDisc} <b>Disciplina:</b> ${requerimento.nomeDisc} #{/if}
+							#{if requerimento?.nomeDisc2} - ${requerimento.nomeDisc2} #{/if}
+							#{if requerimento?.nomeProf} <b>Professor:</b> ${requerimento.nomeProf} #{/if}
+							#{if requerimento?.nomeProf2} - ${requerimento.nomeProf2}#{/if}
+							
+							#{if requerimento?.nomeProf || requerimento?.nomeProf2}<br> <b>Descricao:</b>#{/if}
+							
+							
+							${requerimento.textarea}
+							#{if requerimento?.textarea2}
+							<br>
+							<hr> 
+							#{/if}	
+							
+							#{if requerimento?.data3} <b>Data:</b> ${requerimento.data3} #{/if}
+							#{if requerimento?.data4} - ${requerimento.data4} #{/if}
+							
+							#{if requerimento?.nomeTipo3} <b>Tipo:</b> ${requerimento.nomeTipo3} #{/if}
+							#{if requerimento?.nomeTipo4} - ${requerimento.nomeTipo4} #{/if}
+							
+							#{if requerimento?.nomeDisc3} <b>Disciplina:</b> ${requerimento.nomeDisc3} #{/if}
+							#{if requerimento?.nomeDisc4} - ${requerimento.nomeDisc4} #{/if}
+							#{if requerimento?.nomeProf3} <b>Professor:</b> ${requerimento.nomeProf3} #{/if}
+							#{if requerimento?.nomeProf4} - ${requerimento.nomeProf4}#{/if}
+							
+							#{if requerimento?.nomeProf3 || requerimento?.nomeProf4} <b>Descricao:</b>#{/if}					
+							#{if requerimento?.textarea2}
+								 ${requerimento.textarea2} <b>(2)</b>
+							#{/if}		
+							
+							
+							
+							</td>	
+							<td align="center">
+						#{if requerimento?.requerimento_anexado}
+						<a href="../uploads/${requerimento?.requerimento_anexado}" title="Clique para abrir" target="_blank" style="text-decoration:none; color:black;">Visualizar<span class="iconify" data-icon="akar-icons:eye-open"></span></a>
+											
+						#{/if}
+						
+						#{if requerimento?.requerimento_anexado2}
+						<br>
+						<hr>
+						<a  href="../uploads/${requerimento?.requerimento_anexado2}" title="Clique para abrir" target="_blank" style="text-decoration:none; color:black;" >Visualizar<span class="iconify" data-icon="akar-icons:eye-open"></span>(2)</a>
+						#{/if}
+						
+						#{if requerimento?.requerimento_anexado == null && requerimento?.requerimento_anexado2 == null}	
+							<span class="iconify" data-icon="bi:folder-x"></span>
+						#{/if}	
+					</td>		
+							<td>
+							<form action="@{Professores.salvar()}" method="post">	
+							<input type="hidden" name="requerimento.id" value="${requerimento?.id}">
+								<select name="requerimento.sit" value="${requerimento?.sit}">
+									<option disabled selected value>Finalizar</option>		
+												
+									<option>DEFERIR</option>
+									<option>INDEFERIR</option>
+									
+									
+								</select>
+							</td>
+							<td colspan="8" align="center">	<button type="submit" class="btn btn-outline-success"><span class="iconify" data-icon="dashicons:saved"></span></button></td>
+							</form>
+												
+							
+						</tr>
+				#{/if}		
+			#{/list}
+			</tbody>
+			
+		
+		</table> 
+
+
+</body>
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="requerimento.textarea2"
+
+asdasdasd
+------WebKitFormBoundarywetAI7zzJs8yL4Xw
+Content-Disposition: form-data; name="salvar"
+
+
+------WebKitFormBoundarywetAI7zzJs8yL4Xw--

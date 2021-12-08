@@ -1,0 +1,30 @@
+#{extends 'main.html' /} #{set title:'Pagina Inicial'/}
+
+
+<style>
+.parte03 h2 {
+	text-align: center;
+	margin-bottom: 32px;
+
+</style>
+<body>
+<div class="parte03">
+	<h2>SUGESTAO</h2>
+	
+	
+	<ul>
+		
+		<li>
+		#{list items:usuarios, as: 'usuario'}
+			#{if usuario?.sugestao}
+			${usuario.sugestao} |
+			#{/if}
+		#{/list}
+		</li>
+		
+	</ul>
+	
+	
+
+</div>
+</body>
