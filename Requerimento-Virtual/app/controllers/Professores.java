@@ -23,6 +23,10 @@ public class Professores extends Controller{
 		List<Usuario> usuarios = Usuario.findAll();
 		render(usuarios);
 	}
+	public static void contato(){
+		List<Usuario> usuarios = Usuario.findAll();
+		render(usuarios);
+	}
 	public static void saveSugestao(Usuario usuario){	
 					
 	usuario.save();

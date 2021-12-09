@@ -1,4 +1,4 @@
-#{extends 'main2.html' /} #{set title:'RV - Sugestao'/}
+#{extends 'main2.html' /} #{set title:'RV - Sugestão'/}
 
 
 
@@ -39,7 +39,7 @@ form button {
 	#{if flash.success}
 	<div class='msgConc'>${flash.success}</div>
 	#{/if} 
-	<h3>SUGEST&Atilde;O</h3>
+	<h3>Sugest&atilde;o</h3>
 <div id="form10">
 	<form action="@{Alunos.saveSugestao}" method="post">
 		<textarea name="usuario.sugestao" value="${Usuario?.sugestao}" class="form-control" id="exampleFormControlTextarea1" maxlength="300"
@@ -48,7 +48,7 @@ form button {
 		
 	
 		<button type="submit" class="btn btn-primary" id="but">Enviar</button>
-		<button type="reset" class="btn btn-primary" id="but">Apagar Tudo</button>
+		<button type="reset" class="btn btn-danger" id="but">Apagar Tudo</button>
 	</form>
 </div>
 

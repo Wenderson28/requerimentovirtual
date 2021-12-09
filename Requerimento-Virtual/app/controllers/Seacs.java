@@ -15,7 +15,6 @@ import models.Seac;
 import models.Usuario;
 import play.cache.Cache;
 import play.data.validation.Valid;
-import play.modules.paginate.ValuePaginator;
 import play.mvc.Controller;
 
 public class Seacs extends Controller{

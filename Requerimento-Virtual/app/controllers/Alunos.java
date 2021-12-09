@@ -23,7 +23,6 @@ import play.cache.Cache;
 import play.data.validation.Required;
 import play.data.validation.Valid;
 import play.libs.Crypto;
-import play.modules.paginate.ValuePaginator;
 import play.mvc.Controller;
 
 public class Alunos extends Controller{
@@ -136,16 +135,10 @@ public class Alunos extends Controller{
 				requerimentos = Requerimento.find("byMotivoLike", "%"+busca+"%").fetch();
 				
 			}
+						
+		
 			
-			ValuePaginator listaPaginada = new ValuePaginator(requerimentos);
-			
-			if(session.get("matriculaUsuario") == matricula) {
-			
-				listaPaginada.setPageSize(2);
-					
-			}
-			
-			render(listaPaginada, requerimentos, usuarios, usuario);
+			render(requerimentos, usuarios, usuario);
 				
 		
 		}
@@ -163,7 +156,8 @@ public class Alunos extends Controller{
 		}
 	
 		public static void Contato(){
-			render();
+			List<Usuario> usuarios = Usuario.findAll();
+			render(usuarios);
 		}
 		public static void sugestao(){
 			List<Usuario> usuarios = Usuario.findAll();
