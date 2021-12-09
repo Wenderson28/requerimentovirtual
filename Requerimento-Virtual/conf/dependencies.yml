@@ -1,6 +1,0 @@
-# Application dependencies #
-
-required:
-- play 1.4.5
-- org.postgresql -> postgresql 9.4.1212:
-force: true
